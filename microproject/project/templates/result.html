@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'multiform.css' %}">
+    </head>
+    <body>
+        <div>
+               <table>
+                    <tr>
+                        <th>Store</th>
+                        <th>Balance</th>
+                        <th>Price</th>
+                        <th>Network</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        
+                    </tr>
+                    {% for x in result %}
+                    <tr>
+                        <td>{{ x.store_name }}</td>
+                        <td>{{ x.balance }}</td>
+                        <td>{{ x.price }}</td>
+                        <td>{{x.network}}</td>
+                        <td>{{ x.address }}</td>
+                        <td>{{x.email}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+        </div>
+    </body>
+</html>
